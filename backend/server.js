@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
+const newsletterRoutes = require("./routes/newsletter.routes.js");
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.get("/api/health", (req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/newsletter", newsletterRoutes);
 
 // Basic 404 handler
 app.use((req, res) => {

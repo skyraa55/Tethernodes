@@ -99,17 +99,46 @@ function useRevealList(count) {
 export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const [leftRef, leftVisible] = useReveal();
   const [cardRef, cardVisible] = useReveal();
   const [benefitRefs, benefitsVisible] = useRevealList(BENEFITS.length);
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    if (!email) return;
-    setSubmitted(true);
-  }
+  async function handleSubmit(e) {
+  e.preventDefault();
 
+  if (!email || loading) return;
+
+  setLoading(true);
+
+  try {
+    const res = await fetch(
+      `${import.meta.env.VITE_API_URL}/newsletter`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      }
+    );
+
+    const data = await res.json();
+
+    if (!res.ok || !data.success) {
+      throw new Error(data.message || "Subscription failed");
+    }
+
+    setSubmitted(true);
+    setEmail("");
+  } catch (error) {
+    console.error(error);
+    alert(error.message || "Something went wrong. Please try again.");
+  } finally {
+    setLoading(false);
+  }
+}
   return (
     <section id="newsletter" className="!bg-white relative overflow-hidden py-24 sm:py-32">
       <div
@@ -234,15 +263,16 @@ export default function Newsletter() {
                 />
               </div>
               <button
-                type="submit"
-                className="w-full text-white font-semibold rounded-xl py-3.5 text-[14px] transition-transform duration-200 hover:-translate-y-[1px]"
-                style={{
-                  background: "linear-gradient(135deg, #6366F1 0%, #38BFE3 100%)",
-                  boxShadow: "0 8px 22px rgba(99,102,241,0.32)",
-                }}
-              >
-                Subscribe Now
-              </button>
+  type="submit"
+  disabled={loading}
+  className="w-full text-white font-semibold rounded-xl py-3.5 text-[14px] transition-transform duration-200 hover:-translate-y-[1px] disabled:opacity-70 disabled:cursor-not-allowed"
+  style={{
+    background: "linear-gradient(135deg, #6366F1 0%, #38BFE3 100%)",
+    boxShadow: "0 8px 22px rgba(99,102,241,0.32)",
+  }}
+>
+  {loading ? "Subscribing..." : "Subscribe Now"}
+</button>
             </form>
           )}
           <p className="text-[11.5px] text-gray-400 mt-4 text-center">
