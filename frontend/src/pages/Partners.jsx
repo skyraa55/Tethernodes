@@ -9,7 +9,7 @@ export default function Partners() {
       <PageBanner
         eyebrow="Technology Partners"
         title="Building Alongside the Web3 Ecosystem"
-        sub="Tethernodes is designed to integrate with the broader blockchain landscape — and to grow through the community that powers it."
+        sub="Tethernodes is designed to integrate with the broader blockchain landscape and to grow through the community that powers it."
       />
       <TechPartners />
     </Layout>

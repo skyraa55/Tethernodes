@@ -86,7 +86,7 @@ export default function CommunityNetwork() {
           </p>
 
           <p className="mt-6 max-w-[560px] font-display text-xl text-slate-900 italic leading-relaxed">
-            Together, we are building more than a platform — we are building a
+            Together, we are building more than a platform we are building a
             global Web3 community.
           </p>
         </div>

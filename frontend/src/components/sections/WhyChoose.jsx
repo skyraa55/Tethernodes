@@ -86,7 +86,7 @@ const ITEMS = [
   {
     icon: ShieldCheck,
     title: "Stability First",
-    body: "Built around USD-pegged stablecoins to provide a more consistent participation experience while minimizing exposure to market volatility.",
+    body: "Built around USD pegged stablecoins to provide a more consistent participation experience while minimizing exposure to market volatility.",
   },
   {
     icon: Zap,
@@ -106,7 +106,7 @@ const ITEMS = [
   {
     icon: Rocket,
     title: "Long-Term Vision",
-    body: "Focused on supporting the infrastructure powering tomorrow's decentralized economy — not short-term market speculation.",
+    body: "Focused on supporting the infrastructure powering tomorrow's decentralized economy not short term market speculation.",
   },
 ];
 
@@ -141,7 +141,7 @@ export default function WhyChoose() {
             of Web3
           </h2>
           <p className="mt-4.5 text-lg text-slate-500 leading-relaxed">
-            No advanced trading knowledge or technical expertise required — just a stable, transparent way to participate.
+            No advanced trading knowledge or technical expertise required just a stable, transparent way to participate.
           </p>
         </div>
 

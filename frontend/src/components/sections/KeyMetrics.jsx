@@ -62,10 +62,10 @@ const ICON_THEMES = [
 const METRICS = [
   { icon: Globe, label: "Global Community", body: "Growing participants across multiple regions worldwide." },
   { icon: Globe2, label: "Countries Reached", body: "Expanding access to decentralized opportunities without geographical barriers." },
-  { icon: Coins, label: "USDT Ecosystem Activity", body: "Supporting a transparent, stablecoin-powered participation model." },
+  { icon: Coins, label: "USDT Ecosystem Activity", body: "Supporting a transparent, stablecoin powered participation model." },
   { icon: Rocket, label: "Web3 Initiatives Supported", body: "Contributing to blockchain infrastructure, DeFi, Layer-2 solutions, and decentralized applications." },
   { icon: Handshake, label: "Community Network", body: "A collaborative ecosystem driven by education, innovation, and shared growth." },
-  { icon: Lock, label: "Blockchain Transparency", body: "Every ecosystem transaction is securely recorded on-chain." },
+  { icon: Lock, label: "Blockchain Transparency", body: "Every ecosystem transaction is securely recorded on chain." },
 ];
 
 export default function KeyMetrics() {
@@ -110,7 +110,7 @@ export default function KeyMetrics() {
             Ecosystem
           </h2>
           <p className="mt-4.5 text-lg leading-relaxed text-gray-500">
-            Our vision extends beyond technology — we're building a worldwide community committed to accelerating blockchain innovation.
+            Our vision extends beyond technology we're building a worldwide community committed to accelerating blockchain innovation.
           </p>
         </div>
 

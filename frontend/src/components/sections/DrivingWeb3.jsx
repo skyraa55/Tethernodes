@@ -24,7 +24,7 @@ const ITEMS = [
   },
   {
     title: "Tokenization",
-    body: "Supporting the evolution of real-world asset tokenization and programmable digital ownership.",
+    body: "Supporting the evolution of real world asset tokenization and programmable digital ownership.",
   },
 ];
 

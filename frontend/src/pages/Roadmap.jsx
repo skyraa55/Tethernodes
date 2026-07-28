@@ -10,7 +10,7 @@ export default function Roadmap() {
       <PageBanner
         eyebrow="Roadmap"
         title="Building the Future, One Milestone at a Time"
-        sub="From foundation to global ecosystem growth — here's how we're getting there, and why the timing matters."
+        sub="From foundation to global ecosystem growth here's how we're getting there, and why the timing matters."
       />
       <RoadmapSection />
       <TrustBand />

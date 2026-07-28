@@ -12,7 +12,7 @@ const PHASES = [
     items: [
       "Launch the Tethernodes platform",
       "Community onboarding begins",
-      "USDT-powered ecosystem goes live",
+      "USDT powered ecosystem goes live",
       "Initial blockchain infrastructure initiatives",
       "Establish global community channels",
     ],

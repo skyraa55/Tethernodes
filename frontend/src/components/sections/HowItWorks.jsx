@@ -193,7 +193,7 @@ export default function HowItWorks() {
 
         <p className="mt-10 text-center text-sm text-gray-400 max-w-2xl mx-auto">
           Every stage is designed to encourage transparency, accessibility, and
-          long-term ecosystem development.
+          long term ecosystem development.
         </p>
       </div>
 

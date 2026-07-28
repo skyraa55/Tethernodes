@@ -296,7 +296,7 @@ export default function Hero() {
             style={{ color: "#A5B4FC", background: "rgba(99,102,241,0.14)", border: "1px solid rgba(99,102,241,0.3)" }}
           >
             <span className="h-1.5 w-1.5 rounded-full th-dot" style={{ background: "#818CF8" }} />
-            Community-Funded Web3 Infrastructure
+            Community Funded Web3 Infrastructure
           </div>
 
           <h1
@@ -321,9 +321,9 @@ export default function Hero() {
           </p>
 
           <p className="th-fade mt-6 text-base leading-relaxed text-paper/60 max-w-2xl" data-delay="3">
-            Tethernodes is building a community-driven ecosystem where individuals
-            can participate in the growth of next-generation blockchain technology
-            through the stability of USDT — connecting global participants with
+            Tethernodes is building a community driven ecosystem where individuals
+            can participate in the growth of next generation blockchain technology
+            through the stability of USDT  connecting global participants with
             innovative Web3 infrastructure projects.
           </p>
 

@@ -11,7 +11,7 @@ export default function Ecosystem() {
       <PageBanner
         eyebrow="The Ecosystem"
         title="Connecting Community Capital with Web3 Innovation"
-        sub="A structured ecosystem designed around transparency and simplicity — from joining, to supporting infrastructure, to network growth."
+        sub="A structured ecosystem designed around transparency and simplicity from joining, to supporting infrastructure, to network growth."
       />
       <HowItWorks />
       <KeyMetrics />

@@ -10,7 +10,7 @@ export default function About() {
       <PageBanner
         eyebrow="About Tethernodes"
         title="Building the Foundation of the Decentralized Future"
-        sub="A community-driven ecosystem funding real blockchain innovation — built on transparency, stability, and shared growth."
+        sub="A community driven ecosystem funding real blockchain innovation built on transparency, stability, and shared growth."
       />
       <CoreValues />
       <CommunityNetwork />

@@ -173,7 +173,7 @@ export default function Newsletter() {
           <p className="mt-4.5 max-w-[520px] text-lg text-slate-500 leading-relaxed">
             Receive the latest updates on platform developments, ecosystem
             milestones, blockchain insights, educational resources, and
-            upcoming announcements — all delivered directly to your inbox.
+            upcoming announcements all delivered directly to your inbox.
           </p>
 
           <ul className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-4">

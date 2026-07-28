@@ -69,7 +69,7 @@ function SectionLabel({ children }) {
 const ITEMS = [
   {
     title: "Stable Value",
-    body: "Participate using a USD-pegged digital asset that minimizes exposure to the extreme volatility commonly associated with cryptocurrencies.",
+    body: "Participate using a USD pegged digital asset that minimizes exposure to the extreme volatility commonly associated with cryptocurrencies.",
   },
   {
     title: "Borderless Participation",
@@ -81,7 +81,7 @@ const ITEMS = [
   },
   {
     title: "Transparent Accounting",
-    body: "Every transaction is recorded on-chain, providing transparency and verifiable records throughout the ecosystem.",
+    body: "Every transaction is recorded on chain, providing transparency and verifiable records throughout the ecosystem.",
   },
 ];
 
