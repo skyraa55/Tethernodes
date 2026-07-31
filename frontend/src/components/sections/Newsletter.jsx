@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const INDIGO = "rgba(99,102,241,0.42)";
 const SKY = "rgba(186,230,253,0.9)";
@@ -100,15 +101,59 @@ export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const [leftRef, leftVisible] = useReveal();
   const [cardRef, cardVisible] = useReveal();
   const [benefitRefs, benefitsVisible] = useRevealList(BENEFITS.length);
 
-  async function handleSubmit(e) {
+//   async function handleSubmit(e) {
+//   e.preventDefault();
+
+//   if (!email || loading) return;
+
+//   setLoading(true);
+
+//   try {
+//     const res = await fetch(
+//       `${import.meta.env.VITE_API_URL}/newsletter`,
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({ email }),
+//       }
+//     );
+
+//     const data = await res.json();
+
+//     if (!res.ok || !data.success) {
+//       throw new Error(data.message || "Subscription failed");
+//     }
+
+//     setSubmitted(true);
+//     setEmail("");
+//   } catch (error) {
+//     console.error(error);
+//     alert(error.message || "Something went wrong. Please try again.");
+//   } finally {
+//     setLoading(false);
+//   }
+// }
+
+
+async function handleSubmit(e) {
   e.preventDefault();
 
   if (!email || loading) return;
+
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    navigate("/signup");
+    return;
+  }
 
   setLoading(true);
 
@@ -119,10 +164,18 @@ export default function Newsletter() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({ email }),
       }
     );
+
+    if (res.status === 401) {
+      // token missing/expired/invalid on the server side
+      localStorage.removeItem("token");
+      navigate("/signup");
+      return;
+    }
 
     const data = await res.json();
 
