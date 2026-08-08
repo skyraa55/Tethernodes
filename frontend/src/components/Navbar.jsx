@@ -93,6 +93,7 @@ export default function Navbar() {
           width: 42px;
           height: 42px;
           object-fit: contain;
+           filter: brightness(0) saturate(100%) invert(38%) sepia(93%) saturate(1955%) hue-rotate(226deg) brightness(101%) contrast(96%);
         }
         .tn-logo-name {
           font-size: 18px;
